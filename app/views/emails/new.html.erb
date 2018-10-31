@@ -1,0 +1,10 @@
+<%= form_for :validate_email , url: url_for(:controller => 'emails', :action => 'create') do |f| %>
+  <p>
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </p>
+
+  <p>
+    <%= f.submit :Check %>
+  </p>
+<% end %>
