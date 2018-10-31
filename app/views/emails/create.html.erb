@@ -3,53 +3,41 @@
 	  <strong>Please insert an email ! </strong>
 	</p>
 <%else%>
-	<p>
-	  <strong>Email:</strong>
-	  <%= @response[:email] %>
-	</p>
-	<p>
-	  <strong>Did You Mean:</strong>
-	  <%= @response[:did_you_mean] %>
-	</p>
-	<p>
-	  <strong>User:</strong>
-	  <%= @response[:user] %>
-	</p>
-	<p>
-	  <strong>Domain:</strong>
-	  <%= @response[:domain] %>
-	</p>
-	<p>
-	  <strong>Format Valid:</strong>
-	  <%= @response[:format_valid] %>
-	</p>
-	<p>
-	  <strong>Mx Found:</strong>
-	  <%= @response[:mx_found] %>
-	</p>
-	<p>
-	  <strong>Smtp Check:</strong>
-	  <%= @response[:smtp_check] %>
-	</p>
-	<p>
-	  <strong>Catch All:</strong>
-	  <%= @response[:catch_all] %>
-	</p>
-	<p>
-	  <strong>Role:</strong>
-	  <%= @response[:role] %>
-	</p>
-	<p>
-	  <strong>Disposable:</strong>
-	  <%= @response[:disposable] %>
-	</p>
-	<p>
-	  <strong>Free:</strong>
-	  <%= @response[:free] %>
-	</p>
-	<p>
-	  <strong>Score:</strong>
-	  <%= @response[:score] %>
-	</p>
+<table class="table table-hover">
+  <thead>
+    <tr>
+    	<th scope="col">#</th>
+      	<th scope="col">Email</th>
+		<th scope="col">Did You Mean</th>
+		<th scope="col">User</th>
+		<th scope="col">Domain</th>
+		<th scope="col">Format Valid</th>
+		<th scope="col">Mx Found</th>
+		<th scope="col">Smtp Check</th>
+		<th scope="col">Catch All</th>
+		<th scope="col">Role</th>
+		<th scope="col">Disposable</th>
+		<th scope="col">Free</th>
+		<th scope="col">Score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+	<td><%= @response[:email] %></td>
+	<td><%= @response[:did_you_mean] %></td>
+	<td><%= @response[:user] %></td>
+	<td><%= @response[:domain] %></td>
+	<td><%= @response[:format_valid] %></td>
+	<td><%= @response[:mx_found] %></td>
+	<td><%= @response[:smtp_check] %></td>
+	<td><%= @response[:catch_all] %></td>
+	<td><%= @response[:role] %></td>
+	<td><%= @response[:disposable] %></td>
+	<td><%= @response[:free] %></td>
+	<td><%= @response[:score] %></td>
+    </tr>
+  </tbody>
+</table>
 <%end%>
 <%= link_to 'Back', new_email_path%>

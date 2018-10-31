@@ -1,10 +1,11 @@
-<%= form_for :validate_email , url: url_for(:controller => 'emails', :action => 'create') do |f| %>
-  <p>
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
-  </p>
-
-  <p>
-    <%= f.submit :Check %>
-  </p>
-<% end %>
+<div class="form-row">
+    <div class="col-md-4 mb-3">
+      <%= form_for :validate_email , url: url_for(:controller => 'emails', :action => 'create') do |f| %>
+        <div class="form-group">
+          <%= f.label :email %>
+          <%= f.text_field :email ,class: "form-control" ,id: "exampleInputEmail1" , placeholder: "Enter email"%>
+        </div>
+        <%= f.submit :Check , class: "btn btn-primary"%>
+      <% end %>
+    </div>
+</div>
