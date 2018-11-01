@@ -3,11 +3,7 @@ class Rack::Attack
   # but you can override that by setting the `Rack::Attack.cache.store` value
   Rack::Attack.cache.store = ActiveSupport::Cache::MemoryStore.new
 
-  # Allow all local traffic
-  # whitelist('allow-localhost') do |req|
-  #   '127.0.0.1' == req.ip || '::1' == req.ip
-  # end
-  throttle('req/ip', limit: 2, period: 10.minutes) do |req|
+  throttle('req/ip', limit: 5, period: 1.seconds) do |req|
     req.ip if req.path == '/api/emails' && req.get? || req.path == '/emails' && req.post?
   end
 
