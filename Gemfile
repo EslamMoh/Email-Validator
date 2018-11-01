@@ -29,8 +29,10 @@ gem 'httparty'
 gem "responders"
 gem 'bootstrap', '~> 4.1.3'
 gem 'jquery-rails'
+gem 'rack-attack', '~> 5.4.2'
 # Use Redis adapter to run Action Cable in production
-# gem 'redis', '~> 4.0'
+gem 'redis', '~> 4.0'
+gem 'redis-namespace'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
