@@ -4,4 +4,5 @@ resources :emails
   namespace :api  do
     get 'emails', to: 'emails#index'
   end
+  root to: 'emails#new'
 end
