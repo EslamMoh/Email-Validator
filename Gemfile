@@ -33,6 +33,7 @@ gem 'rack-attack', '~> 5.4.2'
 # Use Redis adapter to run Action Cable in production
 gem 'redis', '~> 4.0'
 gem 'redis-namespace'
+ruby "2.4.1"
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
