@@ -1,4 +1,3 @@
-# Pricing Algorithm Task : Check the [pricing algorithm repo](https://github.com/EslamMoh/pricing_algorithm)
 # Email Validator Task
 
 This application is validating if the entered email is right or not , it supports connection through Api's and views (Browser) , There is also a rate limit for requests `(at most 5 requests per second are allowed)` , it is built using [Mailboxlayer Api's](https://mailboxlayer.com)
